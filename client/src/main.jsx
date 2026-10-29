@@ -1,5 +1,6 @@
 import { StrictMode, useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Analytics } from '@vercel/analytics/react'
 import './styles.css'
 
 const initialProjects = [
@@ -193,6 +194,7 @@ function App() {
         <div className="footer-bottom"><span>© 2026 PRABIN RIMAL</span><div className="social-links"><a href="https://github.com/ItssPrabin" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" /></a><a href="https://www.linkedin.com/in/prabin-rimal-3675042a5/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin" /></a></div></div>
       </footer>
       <button className={`back-to-top${hasScrolled ? ' is-visible' : ''}`} type="button" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><Icon name="down" /></button>
+      <Analytics />
     </main>
   )
 }
